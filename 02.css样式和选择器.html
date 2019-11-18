@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 使用link标签导入的一个外部css文件，效果是和写在本页面中的css效果时一样的 -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<!-- style标签中写css样式 -->
+<style>
+    /* 样式列表 */
+    /* 
+       xxx{
+           yyy:zzz;
+       }
+
+       xxx：是选择器
+       yyy：样式名
+       zzz：是样式值
+    
+    */
+    button{
+        color: red
+    }
+    #btn{
+        color: blue;
+    }
+    .box{
+        background-color: green;
+        color: pink;
+    }
+    .qwe{
+        background-color: #b0b0b0;
+    }
+</style>
+<body>
+    <button>你好</button>
+    <!-- id是具有唯一性，在一个页面中不允许出现2个相同的id -->
+    <!-- 名字在命名的时候要规范，不能用数字开头 ，不能使用关键词例如：li ,body ,也不能起名为a1,a2,...最好用单词起名：例如：姓名：name ，年龄age-->
+    <!-- class 类名选择器  ，命名规则和id的时一样的，但是class的值可以相同 ，也可以有很多个-->
+    <button id="btn" class="box">大家好</button>
+   
+    <div class="box qwe">大家下午好！</div>
+
+    <p style="font-size: 100px;color: red;font-family: 楷体;background-color: cyan;height: 150px;line-height: 150px;">中国万岁！</p>
+</body>
+</html>
