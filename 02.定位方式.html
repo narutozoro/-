@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定位方式</title>
+</head>
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* border边框  1px边框线的粗细  solid边框线的类型是实线  #333边框线的颜色 */
+        border: 1px solid #333;
+    }
+
+    #d1 {
+        background-color: green;
+    }
+
+    #d2 {
+        background-color: yellow;
+        /* position 表示元素的定位方式 */
+        /* relative 相对定位  相对于自身原本在文档流中的位置进行定位 ，参与流式布局，可以通过top bottom，left，right来进行定位的 */
+        position: relative;
+        top: 20px;
+        left: 50px;
+    }
+
+
+    /* 绝对定位 */
+    /* 
+       absolute绝对定位：绝对定位的元素会脱离文档流，不在参与流式布局，在父元素的文档流中没有它的位置。它也是通过top bottom left right来进行定位调整的
+     */
+
+    /* absolute定位的元素，会先查看它的父元素是否为static定位，如果不是就读他的父元素进行定位，如果就查看它父元素的父元素是否为static，一直找到html */
+
+    /* 如果想让一个元素相对于自己父元素进行定位，那么就把父元素设为非static的即可，一般情况下设置为relative，因为relative不会破会父元素原本的流式布局 */
+    .father div {
+        width: 120px;
+        height: 120px;
+    }
+
+    .father {
+        position: relative;
+        background-color: #e0e0e0;
+    }
+
+    #d4 {
+        background-color: pink;
+        position: absolute;
+        top: 100px;
+        left: 20px;
+    }
+
+    #d5 {
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: 50px;
+    }
+
+    #d6 {
+        background-color: aqua;
+    }
+
+    /* .b1{
+        padding: 100px;
+        position: relative;
+        background-color: red;
+    } */
+
+
+
+    /* 固定定位 */
+
+     /* fixed固定定位 */
+        /* 固定定位会使元素脱离文档流，不参与流失布局，它是通过left right top bottom进行移动的 ,fixed固定定位的元素是相对于根标签html进行定位的，它不会随页面滚动而滚动*/
+    .nav div{
+       width: 50px;
+       height: 30px;
+    }
+    #d7{
+        background-color:rosybrown;
+    }
+    #d8{
+        background-color:royalblue;
+    }
+    #d9{
+        background-color:seagreen;
+    }
+    #d10{
+        background-color:springgreen;
+    }
+    .nav{
+        position: fixed;
+        top:500px;
+        right: 0;
+    }
+</style>
+
+<body>
+    <!-- 
+        static静态定位，元素默认的定位方式;
+        relative相对定位，元素位置轻微调整时使用;
+        absolute局对定位，元素  相对于  父元素的位置 进行调整时使用的;
+        fixed固定定位，希望元素不随页面滚动而滚动，将元素固定在某个位置不懂时使用的，例如一些导航栏，侧边栏...
+     -->
+
+    <div id="d1" class="box"></div>
+    <div id="d2" class="box">我在这里相对定位</div>
+    <div id="d3" class="box"></div>
+
+    <hr>
+    <div class="father">
+        <div class="b1">
+            <div id="d4"></div>
+            <div id="d5">绝对定位</div>
+            <div id="d6"></div>
+        </div>
+
+    </div>
+
+
+    <hr>
+    <div class="nav">
+        <div id="d7">1</div>
+        <div id="d8">2</div>
+        <div id="d9">3</div>
+        <div id="d10">4</div>
+    </div>
+
+    <div>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+        <p>撑开页面</p>
+    </div>
+
+</body>
+
+</html>
